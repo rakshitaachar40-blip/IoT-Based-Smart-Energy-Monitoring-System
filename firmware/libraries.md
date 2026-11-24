@@ -8,9 +8,9 @@ This document identifies the libraries included in the firmware and describes th
 
 ## 2. Libraries Used
 
-The following libraries are included in the uploaded firmware source.
+The following libraries and configuration files are included in the firmware.
 
-| Sl. No. | Library | Header File | Purpose |
+| Sl. No. | Library / File | Header File | Purpose |
 |---|---|---|---|
 | 1 | EmonLib | `EmonLib.h` | Voltage and real-power measurement calculations |
 | 2 | EEPROM | `EEPROM.h` | Persistent storage of accumulated energy and bill values |
@@ -18,6 +18,7 @@ The following libraries are included in the uploaded firmware source.
 | 4 | Firebase ESP Client | `Firebase_ESP_Client.h` | Communication with Firebase Realtime Database |
 | 5 | Wire | `Wire.h` | I2C communication interface |
 | 6 | LiquidCrystal_I2C | `LiquidCrystal_I2C.h` | Control of the 16×2 I2C LCD |
+| 7 | Configuration file | `configuration.h` | Stores Wi-Fi and Firebase credentials separately from the main firmware source |
 
 ## 3. Library Descriptions
 
@@ -125,6 +126,27 @@ It is used to display:
 - Accumulated energy.
 - Estimated bill.
 
+### 3.7 Configuration File
+
+**Header:** `configuration.h`
+
+The configuration file separates sensitive network and cloud credentials from the main firmware source.
+
+It contains the configuration macros required for:
+
+- Wi-Fi network name.
+- Wi-Fi password.
+- Firebase database host.
+- Firebase authentication token.
+
+The main firmware includes this file using:
+
+```cpp
+#include "configuration.h"
+```
+
+Keeping credentials in a separate file helps prevent accidental exposure when sharing the firmware source publicly.
+
 ## 4. Library Initialization and Usage
 
 The general firmware initialization sequence includes:
@@ -153,6 +175,17 @@ The following dependencies must be available in the Arduino IDE environment:
 The exact library versions used during the original development have not yet been recorded.
 
 Compatible versions should be selected and tested before reproducing the firmware.
+
+### Private Configuration File
+
+The firmware requires a project-specific `configuration.h` file containing the Wi-Fi and Firebase credentials.
+
+- Create this file locally using the provided `configuration-example.h` template.
+- Replace the placeholder values with the required credentials.
+- Keep the actual `configuration.h` file private.
+- Do not upload the file containing actual credentials to GitHub.
+
+The example configuration file is provided in the repository to help developers prepare their local configuration.
 
 ## 6. Platform Requirements
 
