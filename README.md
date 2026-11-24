@@ -164,7 +164,10 @@ Detailed records of each phase will be maintained in the `docs/`, `hardware/`, `
 ## 11. Repository Structure
 
 ```text
-IoT-Smart-Energy-Monitoring-System/
+## 11. Repository Structure
+
+```text
+IoT-Based-Smart-Energy-Monitoring-System/
 │
 ├── README.md
 ├── LICENSE
@@ -173,7 +176,7 @@ IoT-Smart-Energy-Monitoring-System/
 ├── docs/
 │   ├── project-overview.md
 │   ├── problem-statement.md
-│   ├── objectives.md
+│   ├── objectives-and-requirements.md
 │   ├── system-architecture.md
 │   ├── working-principle.md
 │   ├── hardware-design.md
@@ -190,34 +193,13 @@ IoT-Smart-Energy-Monitoring-System/
 │   ├── pcb-design/
 │   └── enclosure/
 │
-├── firmware/
-│   ├── energy-monitor/
-│   ├── libraries.md
-│   └── configuration-example.h
-│
-├── software/
-│   ├── firebase/
-│   └── mobile-app/
-│
-├── testing/
-│   ├── sensor-calibration.md
-│   ├── verification-results.md
-│   └── test-observations.md
-│
-├── business/
-│   ├── product-development-journey.md
-│   ├── market-research.md
-│   ├── cost-analysis.md
-│   └── stakeholder-feedback.md
-│
-├── images/
-│   ├── prototype/
-│   ├── pcb/
-│   ├── final-product/
-│   └── exhibitions/
-│
-└── CHANGELOG.md
-```
+└── firmware/
+    ├── README.md
+    ├── libraries.md
+    ├── configuration-example.h
+    └── firmware/
+        └── energy-monitor/
+            └── energy-monitor.ino
 
 ## 12. Future Enhancements
 
