@@ -34,3 +34,6 @@ credentials.h
 *.tmp
 *.bak
 *~
+
+# Private firmware configuration
+configuration.h
