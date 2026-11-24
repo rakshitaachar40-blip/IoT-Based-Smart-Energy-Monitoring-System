@@ -1,0 +1,36 @@
+# Arduino IDE
+*.ino.eep
+*.elf
+*.hex
+*.bin
+*.map
+*.o
+*.a
+
+# ESP32 / PlatformIO build files
+.pio/
+build/
+out/
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment and secret configuration files
+.env
+.env.*
+secrets.h
+firebase_config.h
+credentials.h
+
+# Temporary and backup files
+*.tmp
+*.bak
+*~
