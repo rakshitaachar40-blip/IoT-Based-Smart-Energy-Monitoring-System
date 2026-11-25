@@ -79,7 +79,24 @@ Library details are available in [Firmware Libraries and Dependencies](firmware/
 The system follows the data flow below:
 ![System Architecture](system_architecture.png)
 
-
+AC Electrical Supply
+                 |
+       +---------+---------+
+       |                   |
+  ZMPT101B Sensor     ACS712 Sensor
+    (Voltage)           (Current)
+       |                   |
+       +---------+---------+
+                 |
+               ESP32
+                 |
+       +---------+---------+
+       |                   |
+    16×2 LCD             Wi-Fi
+                           |
+                    Firebase RTDB
+                           |
+                   Mobile Application
 The ESP32 acts as the central processing and communication unit. The LCD provides local monitoring, while Firebase enables remote access to the available readings.
 
 See [System Architecture](docs/system-architecture.md).
