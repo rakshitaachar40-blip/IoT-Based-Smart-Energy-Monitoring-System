@@ -39,7 +39,15 @@ The database serves as the central point through which the mobile application ac
 
 The actual database paths, field names and data types will be documented in:
 
-`software/firebase/database-structure.md`
+The firmware writes the latest voltage, current, power, energy and bill values to the following Firebase Realtime Database paths:
+
+- `/energyMeter/voltage`
+- `/energyMeter/current`
+- `/energyMeter/power`
+- `/energyMeter/energy`
+- `/energyMeter/bill`
+
+These paths are also documented in the Firebase Integration section of the root README.
 
 ### 2.3 Mobile Application
 
@@ -51,7 +59,9 @@ The application interacts with Firebase to retrieve the data made available by t
 
 Application screenshots, interface details and project files will be maintained in:
 
-`software/mobile-app/`
+The mobile application was developed using MIT App Inventor and accesses monitoring data through Firebase.
+
+The MIT App Inventor project file (`.aia`) and APK are not included in this public repository.
 
 ## 3. Embedded Firmware Workflow
 
@@ -82,12 +92,11 @@ The firmware follows the general workflow below.
 
 Calculate the required parameters using the implemented algorithms:
 
-- RMS voltage.
-- RMS current.
-- Real power.
-- Energy consumption.
-- Power factor.
-- Estimated electricity cost.
+- RMS voltage calculated using EmonLib.
+- Real power calculated using EmonLib.
+- Current value derived from real power divided by voltage.
+- Accumulated energy calculated using smoothed real power and elapsed time.
+- Estimated electricity cost calculated using the configured slab rates.
 
 ### Stage 5 — Local Display
 
@@ -197,7 +206,7 @@ Software testing should cover:
 - Handling of communication failures.
 - Overall system operation.
 
-Test procedures and observations will be maintained in the `testing/` directory.
+Refer to `docs/calibration-and-testing.md` for the testing information documented in this repository.
 
 ## 11. Summary
 
