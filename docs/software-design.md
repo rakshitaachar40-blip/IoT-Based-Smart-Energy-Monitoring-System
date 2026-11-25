@@ -37,7 +37,6 @@ The ESP32 transmits monitoring information to the configured database structure.
 
 The database serves as the central point through which the mobile application accesses the available readings.
 
-The actual database paths, field names and data types will be documented in:
 
 The firmware writes the latest voltage, current, power, energy and bill values to the following Firebase Realtime Database paths:
 
@@ -57,10 +56,10 @@ Its purpose is to provide a user-friendly interface for accessing the monitoring
 
 The application interacts with Firebase to retrieve the data made available by the ESP32.
 
-Application screenshots, interface details and project files will be maintained in:
 
 The mobile application was developed using MIT App Inventor and accesses monitoring data through Firebase.
 
+The public repository does not include the MIT App Inventor project file, so the exact application components and data bindings cannot be independently verified from the repository.
 The MIT App Inventor project file (`.aia`) and APK are not included in this public repository.
 
 ## 3. Embedded Firmware Workflow
@@ -163,7 +162,7 @@ Its general workflow is:
 3. Interpret the received values.
 4. Display the parameters through the application dashboard.
 
-The exact application components and data bindings will be documented after examining the application project.
+The public repository does not include the MIT App Inventor project file, so the exact application components and data bindings cannot be independently verified from the repository.
 
 ## 8. Software Integration Considerations
 
