@@ -30,7 +30,6 @@ The project addresses these limitations through an IoT-enabled monitoring platfo
 - Develop an ESP32-based energy monitoring system.
 - Measure voltage and current using dedicated sensors.
 - Calculate electrical parameters such as power and energy consumption.
-- Monitor power factor.
 - Estimate electricity costs based on configurable tariff values.
 - Display measurements through a 16×2 I2C LCD.
 - Integrate Firebase for cloud-based data communication.
@@ -44,7 +43,6 @@ The project addresses these limitations through an IoT-enabled monitoring platfo
 - Real-time current monitoring.
 - Electrical power measurement.
 - Energy consumption monitoring in kWh.
-- Power factor monitoring.
 - Estimated electricity bill calculation.
 - Local LCD-based display.
 - Firebase cloud integration.
@@ -119,7 +117,6 @@ The system is designed to monitor and calculate the following parameters:
 | Current | Electrical current consumption | A |
 | Power | Electrical power consumption | W |
 | Energy | Accumulated electrical energy | kWh |
-| Power Factor | Relationship between real and apparent power | — |
 | Estimated Bill | Calculated electricity cost | INR (₹) |
 
 The calculation methods, assumptions and calibration procedures will be documented separately.
