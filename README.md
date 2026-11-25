@@ -149,7 +149,7 @@ Developed a custom PCB, refined the hardware implementation and improved the ove
 ### Phase 8 — Product Validation and Stakeholder Interaction
 Presented the prototype at PUPA 2026 – Make in BVB, interacted with potential users and stakeholders, gathered feedback and explored further product improvements.
 
-Detailed records of each phase will be maintained in the `docs/`, `hardware/`, `firmware/`, `software/` and `testing/` directories.
+Detailed records of each phase are maintained in the `docs/`, `hardware/` and `firmware/` directories.
 
 ## 10. Achievements and Recognition
 
@@ -197,7 +197,6 @@ IoT-Based-Smart-Energy-Monitoring-System/
     └── firmware/
         └── energy-monitor/
             └── energy-monitor.ino
-
 ## 12. Future Enhancements
 
 Potential areas for further development include:
